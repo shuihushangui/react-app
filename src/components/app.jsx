@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import logo from '../logo.svg'
 import urls from "../api/urls";
 import processingRequest from '../api/processingRequest';
+import { Button } from 'antd';
 
 export default class App extends Component {
   constructor(props){
@@ -21,7 +21,7 @@ export default class App extends Component {
   render () {
     return (
       <div>
-				<img onClick={this.handleClick} className='logo' src={logo} alt="logo" />
+        <Button onClick={this.handleClick} type="primary">Button</Button>
 			</div>
     )
   }
