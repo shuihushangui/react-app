@@ -13,3 +13,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.appBox {
+  width: 100%;
+  min-height: 84vh;
+}
+
+.activeAppBox {
+  width: 100%;
+  min-height: 92vh;
+}
+
+.activeColor {
+  color: #D2691E;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*正常的未被访问过的链接*/
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+/*已经访问过的链接*/
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/*鼠标划过(停留)的链接*/
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* 正在点击的链接*/
+a:active {
+  text-decoration: none;
+  color: black;
+}
