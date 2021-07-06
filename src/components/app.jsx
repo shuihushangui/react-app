@@ -5,11 +5,7 @@ import { DatabaseOutlined, HomeOutlined, UserOutlined, SearchOutlined } from '@a
 import home from "../views/home";
 import book from "../views/bookCity";
 import user from "../views/user";
-import search from "../views/search";
 import Search from "../views/search";
-
-import urls from "../api/urls";
-import processingRequest from '../api/processingRequest';
 
 class App extends Component {
   constructor(props){
@@ -17,7 +13,7 @@ class App extends Component {
     this.state = {
       headerShow: true,
       footerShow: true,
-      footerId: '1'
+      footerId: '1',
     }
     this.handleClickHome = this.handleClickHome.bind(this)
     this.handleClickBook = this.handleClickBook.bind(this)
@@ -25,12 +21,6 @@ class App extends Component {
     this.handleClickSearch = this.handleClickSearch.bind(this)
     this.handleSetState = this.handleSetState.bind(this)
   }
-
-  // handleClick(){
-  //   processingRequest(urls.allCategories).then(res => {
-  //     console.log(res.data)
-  //   })
-  // }
 
   handleClickHome(){
     this.props.history.push('/home')
@@ -42,7 +32,12 @@ class App extends Component {
   }
 
   handleClickBook(){
-    this.props.history.push(`/book`)
+    // let path = {
+		// 	pathname: "/book",
+		// 	state: this.state.hotId,
+		// }
+    // this.props.history.push(path)
+    this.props.history.push('/book')
     this.setState({
       headerShow: true,
       footerShow: true,
@@ -78,10 +73,11 @@ class App extends Component {
     let header = {
       width:'100%',
       height:'8vh',
-      position:'relative',
+      position:'fixed',
       top:'0px',
       right:'0px',
       backgroundColor:'#D2691E',
+      zIndex: '999',
     }
 
     let title = {
@@ -96,7 +92,9 @@ class App extends Component {
       position:'fixed',
       bottom:'0px',
       right:'0px',
-      borderTop:'1px solid #aaa'
+      borderTop:'1px solid #aaa',
+      backgroundColor: '#fff',
+      zIndex: '999'
     }
 
     let item = {
@@ -135,7 +133,6 @@ class App extends Component {
           <Route path='/home' component={home}/>
           <Route path='/book' component={book}/>
           <Route path='/user' component={user}/>
-          {/* <Route path='/search' component={search}/> */}
           <Route path='/search' render={() => (<Search {...this.props} onHandleSet={this.handleSetState} /> )} /> 
           <Redirect to='/home'/>
         </Switch>

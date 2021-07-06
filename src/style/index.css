@@ -28,6 +28,48 @@ code {
   color: #D2691E;
 }
 
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabBox>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab{
+  width: 33vw;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tabRankingItem>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab{
+  width: 33vw;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tabRankingBox>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab{
+  width: 25vw;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tabClassBox>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab{
+  width: 25vw;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  justify-content:center;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -55,4 +97,98 @@ a:hover {
 a:active {
   text-decoration: none;
   color: black;
+}
+
+.bookItemBox .ant-layout {
+  background-color: #fff;
+}
+
+.bookItemBox .ant-layout-sider {
+  background-color: #fff;
+}
+
+.bookItemBox .ant-layout-header {
+  background-color: #fff;
+  line-height: 5vh;
+  padding: 0;
+}
+
+.bookItemBox .ant-layout-footer {
+  background-color: #fff;
+  padding: 0;
+}
+
+.itemContent {
+  width: 50vw;
+  height: 33%;
+  font-size: 14px;
+  color: #ccc;
+  text-align: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.itemContentClass {
+  width: 20vw;
+  height: 33%;
+  font-size: 14px;
+  color: #ccc;
+  text-align: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.tabClassBox .ant-layout {
+  background-color: #fff;
+}
+
+.tabClassBox .ant-layout-sider {
+  background-color: #fff;
+}
+
+.tabClassBox .ant-layout-header {
+  background-color: #fff;
+  line-height: 5vh;
+  padding: 0;
+}
+
+.tabClassBox .ant-layout-footer {
+  background-color: #fff;
+  padding: 0;
+}
+
+.boxClassItem>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab {
+  max-width: 13vh;
+}
+.boxClassItem>.ant-tabs-nav>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab>.ant-tabs-tab-btn {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.boxClassItem .ant-layout {
+  background-color: #fff;
+}
+
+.boxClassItem .ant-layout-sider {
+  background-color: #fff;
+}
+
+.boxClassItem .ant-layout-header {
+  background-color: #fff;
+  line-height: 5vh;
+  padding: 0;
+}
+
+.boxClassItem .ant-layout-footer {
+  background-color: #fff;
+  padding: 0;
 }
