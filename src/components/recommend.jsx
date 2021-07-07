@@ -24,7 +24,7 @@ export default class recommend extends Component {
 
     let line = {
       width: '100vw',
-      height: '2vh',
+      height: '1vh',
       backgroundColor: '#eee'
     }
 
