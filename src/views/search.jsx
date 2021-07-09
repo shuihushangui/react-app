@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Switch, Route } from 'react-router-dom'
 import { Row, Col, Input, message } from 'antd';
 import { LeftOutlined, SearchOutlined, SyncOutlined } from '@ant-design/icons';
 import urls from "../api/urls";
@@ -13,6 +14,7 @@ export default class search extends Component {
       hot: [],
       nowId: 0,
       searchList: [],
+      bookList: [],
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleClickSearch = this.handleClickSearch.bind(this)
@@ -44,13 +46,18 @@ export default class search extends Component {
   handleClickSearch(word){
     if (word) {
       processingRequest(urls.blurrySearch,{query:word}).then(res => {
-        console.log(res.data)
+        let _searchList = this.state.searchList;
+        _searchList.push(word);
+        this.setState({
+          searchList: _searchList,
+          bookList: res.data.books,
+        });
+        let path = {
+          pathname: "/searchList",
+          state: this.state.bookList,
+        }
+        this.props.history.push(path)
       })
-      let _searchList = this.state.searchList;
-      _searchList.push(word);
-      this.setState({
-        searchList: _searchList
-      });
     } else {
       message.warning('请输入书名或作者');
     }
@@ -67,6 +74,12 @@ export default class search extends Component {
     this.setState({
       searchList: []
     });
+  }
+
+  componentWillUnmount () {
+    this.setState = (state,callback)=>{
+      return;
+    };
   }
 
   render () {

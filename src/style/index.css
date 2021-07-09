@@ -192,3 +192,11 @@ a:active {
   background-color: #fff;
   padding: 0;
 }
+
+.jianjie {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #aaa;
+}

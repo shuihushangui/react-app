@@ -6,6 +6,8 @@ import home from "../views/home";
 import book from "../views/bookCity";
 import user from "../views/user";
 import Search from "../views/search";
+import searchList from "../views/searchList";
+import details from "../views/details";
 
 class App extends Component {
   constructor(props){
@@ -32,11 +34,6 @@ class App extends Component {
   }
 
   handleClickBook(){
-    // let path = {
-		// 	pathname: "/book",
-		// 	state: this.state.hotId,
-		// }
-    // this.props.history.push(path)
     this.props.history.push('/book')
     this.setState({
       headerShow: true,
@@ -134,6 +131,8 @@ class App extends Component {
           <Route path='/book' component={book}/>
           <Route path='/user' component={user}/>
           <Route path='/search' render={() => (<Search {...this.props} onHandleSet={this.handleSetState} /> )} /> 
+          <Route path='/searchList' component={searchList}/>
+          <Route path='/details' component={details}/>
           <Redirect to='/home'/>
         </Switch>
 			</div>
